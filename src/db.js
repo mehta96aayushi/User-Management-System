@@ -3,7 +3,7 @@ const dotenv = require('dotenv')
 
 dotenv.config();
 
-// Create the database connection
+/* Create the database connection */
 var connection = mysql.createConnection({
     host: 'localhost',
     port: '3306',
@@ -12,7 +12,7 @@ var connection = mysql.createConnection({
     database: 'user_management_system'
 })
 
-// Establish the MySQL connection
+/* Establish MySQL connection */
 connection.connect(function(err) {
     if(err) throw err;
 

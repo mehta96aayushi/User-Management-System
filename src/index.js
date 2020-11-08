@@ -3,7 +3,7 @@ var app = express()
 
 const morgan = require('morgan')
 
-// Show which kind of request are being called (values: short, combined)
+/* Show which kind of request are being called (values: short, combined) */
 app.use(morgan('short'))
 
 let usersRoute = require('./routes/users')
@@ -12,7 +12,7 @@ app.use(usersRoute)
 
 app.use(express.static('public'))
 
-// localhost:3003
+// http://localhost:3003
 const PORT = process.env.PORT || 3003
 app.listen(PORT, () => console.info(`Server has started on ${PORT}....`))
 
