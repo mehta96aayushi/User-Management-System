@@ -1,8 +1,9 @@
 const express = require('express')
 var app = express()
+
 const morgan = require('morgan')
 
-// short, combined
+// Show which kind of request are being called (values: short, combined)
 app.use(morgan('short'))
 
 let usersRoute = require('./routes/users')
